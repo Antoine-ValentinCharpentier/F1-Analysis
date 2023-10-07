@@ -1,0 +1,171 @@
+@keyframes move {
+    0% {
+        left: -300px;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        left: calc(50%);
+        animation-timing-function: linear;
+    }
+    90% {
+        left: calc(100%);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        left: calc(100%);
+    }
+}
+
+@keyframes move {
+    0% {
+        left: -300px;
+        animation-timing-function: ease-in;
+    }
+    50% {
+        left: calc(50%);
+        animation-timing-function: linear;
+    }
+    90% {
+        left: calc(100%);
+        animation-timing-function: ease-out;
+    }
+    100% {
+        left: calc(100%);
+    }
+}
+
+@keyframes wheelRotate {
+    0% {
+        transform: rotate(0deg);     
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.f1 {
+	position: absolute;
+    bottom: 10px;
+    left: 0px;
+	width: 300px;
+	height: 100px;
+	animation: move 5s linear infinite;
+}
+
+.wheel {
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0;
+	transform-origin: center center;
+	animation: wheelRotate 2s linear infinite;
+}
+
+.wheel-rayons::before,
+.wheel-rayons::after {
+    content: "";
+    width: 10px;
+    height: 30px;
+    border-radius: 20%;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.wheel-rayons::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.wheel-rayons::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+.wheel::before, .wheel::after {
+	content: "";
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.wheel::before {
+	width: 40px;
+	height: 40px;
+	background: white;
+}
+
+.wheel::after {
+	width: 36px;
+	height: 36px;
+	background-color: #666;
+}
+
+.wheel-left {
+	left: 25px;
+}
+
+.wheel-right {
+	right: 75px;
+}
+
+.front-wing {
+    width: 60px;
+    height: 15px;
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    clip-path: polygon(0% 0%, 50% 0%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.support-front-wing {
+    width: 20px;
+    height: 12px;
+    position: absolute;
+    bottom: 20px;
+    right: 35px;
+    clip-path: polygon(5% 0%, 60% 0%, 100% 100%, 0% 100%);
+}
+
+.back-wing {
+    width: 40px;
+    height: 35px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    top: 25px;
+    left: 15px;
+}
+
+.back-wing::before {
+    content: '';
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: yellow;
+}
+
+.f1-body {
+	width: 100%;
+	height: 100%;
+	clip-path: polygon(15% 50%, 30% 10%, 37% 10%, 37% 40%, 48% 40%, 48% 25%, 60% 37%, 72% 37%, 93% 55%, 93% 68%, 70% 70%, 50% 80%, 20% 80%);
+}
+
+.f1-color-mix {
+	background-image: linear-gradient(0deg, red 63%, yellow 63%)
+}
+
+.f1-color1 {
+	background-color: red;
+}
+
+.f1-color3 {
+	background-color: black;
+}

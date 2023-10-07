@@ -1,0 +1,33 @@
+.sidebar-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
+}
+  
+#selected_language + div > .selectize-dropdown {
+    bottom: 100% !important;
+    top: auto !important;
+}
+
+header {
+    width: 100% !important;
+}
+
+header, aside {
+    position: fixed !important;
+}
+
+.content-wrapper {
+    margin-top: 50px;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        margin-top: 100px;
+    }
+}
+
+.col-sm-12 .col-sm-6 {
+    width: 100% !important;
+}
